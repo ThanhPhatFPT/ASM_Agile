@@ -35,6 +35,10 @@ public class login {
     public void setMatKhau(String matKhau) {
         this.matKhau = matKhau;
     }
+    // them fucian
+    public void input(){
+        
+    }
     
     
 }
