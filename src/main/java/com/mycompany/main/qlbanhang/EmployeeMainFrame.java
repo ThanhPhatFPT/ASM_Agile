@@ -4,6 +4,8 @@
  */
 package com.mycompany.main.qlbanhang;
 
+import java.awt.Color;
+
 /**
  *
  * @author giayc
@@ -30,12 +32,12 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lblTrangChu = new javax.swing.JLabel();
+        lblSanPham = new javax.swing.JLabel();
+        lblNhanVien = new javax.swing.JLabel();
+        lblKhachHang = new javax.swing.JLabel();
+        lblHoaDon = new javax.swing.JLabel();
+        lblDangXuat = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,11 +54,20 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
         jPanel4.setPreferredSize(new java.awt.Dimension(200, 447));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Trang Chủ");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblTrangChu.setBackground(new java.awt.Color(0, 0, 0));
+        lblTrangChu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblTrangChu.setText("Trang Chủ");
+        lblTrangChu.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                lblTrangChuMouseMoved(evt);
+            }
+        });
+        lblTrangChu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                lblTrangChuMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblTrangChuMouseExited(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -66,13 +77,13 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 27;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(28, 73, 0, 61);
-        jPanel4.add(jLabel2, gridBagConstraints);
+        jPanel4.add(lblTrangChu, gridBagConstraints);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Sản Phẩm");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblSanPham.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblSanPham.setText("Sản Phẩm");
+        lblSanPham.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
+                lblSanPhamMouseClicked(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -82,13 +93,13 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
         gridBagConstraints.ipady = 36;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 73, 0, 0);
-        jPanel4.add(jLabel3, gridBagConstraints);
+        jPanel4.add(lblSanPham, gridBagConstraints);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setText("Nhân Viên");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblNhanVien.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblNhanVien.setText("Nhân Viên");
+        lblNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
+                lblNhanVienMouseClicked(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -97,13 +108,13 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 73, 0, 0);
-        jPanel4.add(jLabel4, gridBagConstraints);
+        jPanel4.add(lblNhanVien, gridBagConstraints);
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setText("Khách Hàng");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblKhachHang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblKhachHang.setText("Khách Hàng");
+        lblKhachHang.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
+                lblKhachHangMouseClicked(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -112,13 +123,13 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(32, 73, 0, 0);
-        jPanel4.add(jLabel5, gridBagConstraints);
+        jPanel4.add(lblKhachHang, gridBagConstraints);
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setText("Hóa Đơn");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblHoaDon.setText("Hóa Đơn");
+        lblHoaDon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                lblHoaDonMouseClicked(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -127,16 +138,16 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(42, 73, 0, 0);
-        jPanel4.add(jLabel6, gridBagConstraints);
+        jPanel4.add(lblHoaDon, gridBagConstraints);
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("Đăng Xuất");
+        lblDangXuat.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblDangXuat.setText("Đăng Xuất");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(216, 73, 6, 0);
-        jPanel4.add(jLabel7, gridBagConstraints);
+        jPanel4.add(lblDangXuat, gridBagConstraints);
 
         getContentPane().add(jPanel4, java.awt.BorderLayout.LINE_START);
 
@@ -156,40 +167,52 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+    private void lblSanPhamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSanPhamMouseClicked
         // TODO add your handling code here:
         ProductsFrame productsFrame = new ProductsFrame();
         productsFrame.show();
         dispose();
-    }//GEN-LAST:event_jLabel3MouseClicked
+    }//GEN-LAST:event_lblSanPhamMouseClicked
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void lblNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNhanVienMouseClicked
         // TODO add your handling code here:
         EmployeeFrame employeeFrame = new EmployeeFrame();
         employeeFrame.show();
         dispose();
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }//GEN-LAST:event_lblNhanVienMouseClicked
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void lblKhachHangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblKhachHangMouseClicked
         // TODO add your handling code here:
         CustomerFrame customerFrame = new CustomerFrame();
         customerFrame.show();
         dispose();
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }//GEN-LAST:event_lblKhachHangMouseClicked
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void lblHoaDonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHoaDonMouseClicked
         // TODO add your handling code here:
         BillFrame billFrame = new BillFrame();
         billFrame.show();
         dispose();
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_lblHoaDonMouseClicked
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void lblTrangChuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTrangChuMouseClicked
         // TODO add your handling code here:
         EmployeeMainFrame employeeMainFrame = new EmployeeMainFrame();
         employeeMainFrame.show();
         dispose();
-    }//GEN-LAST:event_jLabel2MouseClicked
+        
+        lblTrangChu.setForeground(Color.blue);
+    }//GEN-LAST:event_lblTrangChuMouseClicked
+
+    private void lblTrangChuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTrangChuMouseExited
+        // TODO add your handling code here:
+        lblTrangChu.setForeground(Color.black);
+    }//GEN-LAST:event_lblTrangChuMouseExited
+
+    private void lblTrangChuMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTrangChuMouseMoved
+        // TODO add your handling code here:
+        lblTrangChu.setForeground(Color.red);
+    }//GEN-LAST:event_lblTrangChuMouseMoved
 
     /**
      * @param args the command line arguments
@@ -228,14 +251,14 @@ public class EmployeeMainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel lblDangXuat;
+    private javax.swing.JLabel lblHoaDon;
+    private javax.swing.JLabel lblKhachHang;
+    private javax.swing.JLabel lblNhanVien;
+    private javax.swing.JLabel lblSanPham;
+    private javax.swing.JLabel lblTrangChu;
     // End of variables declaration//GEN-END:variables
 }
